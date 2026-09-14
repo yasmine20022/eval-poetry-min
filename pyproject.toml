@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "eval-poetry-min"
+version = "1.0.0"
+description = "Service FastAPI minimal gere par Poetry"
+authors = ["eval <eval@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.115.0"
+uvicorn = "^0.30.6"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
