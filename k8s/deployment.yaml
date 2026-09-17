@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eval-poetry-min
+  labels:
+    app: eval-poetry-min
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eval-poetry-min
+  template:
+    metadata:
+      labels:
+        app: eval-poetry-min
+    spec:
+      containers:
+      - name: eval-poetry-min
+        image: eval-poetry-min:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            memory: 256Mi
+            cpu: 250m
+          limits:
+            memory: 512Mi
+            cpu: 500m
